@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <section>
+        <div class="login">
+            <form method="POST" action="/login" autocomplete="on">
+                <h2 class="animate__animated animate__zoomInDown">Login</h2>
+
+                <div class="input-box animate__animated animate__slideInLeft">
+                    <span class="material-icons" id="mail">email</span>
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                </div>
+
+                <div class="input-box animate__animated animate__slideInRight">
+                    <span class="material-icons" id="password">lock</span>
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+
+                <button type="submit" class="animate__animated animate__rubberBand">Login</button>
+
+                <div class="registered-link animate__animated animate__fadeInUp">
+                    <p>Don't have an account? <a href="#">Register</a></p>
+                </div>
+
+                <button onclick="history.back()" class="animate__animated animate__rubberBand back-button">←</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: animation_bg 5s linear infinite;
+}
+
+@keyframes animation_bg{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.login{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background-color: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+.input-box{
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid white;
+    position: relative;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: white;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    padding: 0 35px 0 5px ;
+}
+#mail, #password{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2rem;
+    color: white;
+    line-height: 57px;
+}
+.remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+    color: white;
+    font-size: 0.9rem;
+
+}
+.remember-forgot label input{
+    margin-right: 3px;
+}
+.remember-forgot a{
+    text-decoration: none;
+    color: white;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    border: 0.25em solid transparent;
+    background-image: linear-gradient(#fff, #fff),
+      linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 1.5em;
+    transition: background-position 0.8s ease-out;
+}
+.back-button{
+    background: transparent;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.registered-link{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    margin: 25px 0 10px;
+    text-align: center;
+}
+.registered-link a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.registered-link a:hover{
+    text-decoration: underline;
+}
+@media (max-width: 425px){
+    .login{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        border: none;
+    }
+    .input-box{
+        width: 290px;
+    }
+}

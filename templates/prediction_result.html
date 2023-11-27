@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genre Predicted</title>
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+        <!-- Update the href to point to the Flask route for home -->
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <!-- Update these links as per your application's routing -->
+        <li><a href="#about_us">About Us</a></li>
+        <li><a href="#project_report">Project Report</a></li>
+    </ul>
+  </nav>
+  <section>
+    <div class="box">
+      <h1 class="output">Predicted Genre</h1>
+      <p class="output">{{ predicted_genre }}</p>
+    </div>
+  </section>
+</body>
+</html>

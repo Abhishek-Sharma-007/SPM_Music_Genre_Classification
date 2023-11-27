@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent; /* Set background to transparent */
+    color: white; /* Set text color to white */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100; /* Ensure the navbar is above other elements */
+    backdrop-filter: blur(55px); /* Apply backdrop filter for blur effect */
+    border-bottom: 5px solid rgba(255,255,255,0.5); /* Optional: add a bottom border */
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white; /* Ensure text color is white */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar li a:hover {
+        background-color: #111; /* Background color change on hover */
+        color: yellow; /* Text color changes to yellow on hover */
+        transition: color 0.3s, background-color 0.3s; /* Smooth transition for color and background */
+}
+
+/* You might want to add some top padding to your section 
+   to avoid it being hidden under the fixed navbar. */
+section {
+    padding-top: 60px; /* Adjust as needed */
+}
+
+/* Rest of your existing CSS for .box and section */
+
+/* Section with background image */
+section {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+     /* Add this to center the content vertically */
+    min-height: 100vh;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: animation_bg 5s linear infinite;
+}
+
+@keyframes animation_bg {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.box {
+    margin-top: 10%;
+    width: 600px;
+    height: 100px;
+    background-color: transparent;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(55px);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+}
+
+.output {
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: white;
+    font-style: italic;
+    font-weight: 800;
+}

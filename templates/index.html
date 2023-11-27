@@ -1,0 +1,37 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload_Audio_File</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <!-- Update the href to point to the Flask route for home -->
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <!-- Update these links as per your application's routing -->
+            <li><a href="#about_us">About Us</a></li>
+            <li><a href="#project_report">Project Report</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="box">
+            <h1>UPLOAD AUDIO FILE</h1>
+            <form action="/predict" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" required style="color: white;">
+                <input type="submit" value="Upload and Predict">
+            </form>
+        </div>
+    </section>
+</body>
+</html>
